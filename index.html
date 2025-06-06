@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas Asignadas</title>
+    <link rel="stylesheet" href="estilos/estilos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>📋 Lista de Tareas</h1>
+
+        <form id="taskForm">
+            <input type="text" id="person" placeholder="Nombre de la persona" required />
+            <button type="button" onclick="sugerirNombreAleatorio()">Nombre aleatorio (opcional)</button> 
+            <input type="text" id="task" placeholder="Descripción de la tarea" required />
+            <button type="submit">Agregar Tarea</button>
+        </form>
+
+        <div class="filter-box">
+            <input type="text" id="search" placeholder="Buscar tareas o personas..." />
+            <button id="filterBtn">Filtrar</button>
+        </div>
+        <p id="message"></p>
+    </div>
+    <div class="motivational-banner" id="motivationalBanner"></div>
+    <div class="results">
+        <h2>📄 Tareas guardadas</h2>
+        <ul id="taskList"></ul>
+    </div>
+<div class="export-buttons">
+    <button onclick="exportJSON()">Exportar como JSON</button>
+    <button onclick="exportExcel()">Exportar como Excel</button>
+</div>
+<div id="downloadStatus" class="status-message"></div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</body>
+
+</html>

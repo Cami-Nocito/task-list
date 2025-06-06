@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: lightgreen;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px;
+    background-color: lightseagreen;
+    color: black;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: lightskyblue;
+}
+
+#search {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#taskList li {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li button {
+    background-color: lightskyblue;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+#taskList li button:hover {
+    background-color: lightseagreen;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+#exportJson {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-weight: bold;
+}
+
+.filter-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.motivational-banner {
+    margin: 15px auto;
+    padding: 10px 20px;
+    width: fit-content;
+    max-width: 90%;
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: bold;
+    border: 1px solid #facc15;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #facc15;
+    text-align: center;
+    font-size: 1rem;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.motivational-banner.visible {
+    opacity: 1;
+}
+
+.results {
+    max-width: 600px;
+    align-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:lightgreen;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.results h2 {
+    margin-top: 0;
+    color: black;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results li button {
+    background-color: #dc3545;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.results li button:hover {
+    background-color: #c82333;
+}
+
+.export-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.export-buttons button {
+    padding: 8px 12px;
+    border: none;
+    background-color: lightgreen;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.export-buttons button:hover {
+    background-color: green;
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Diseños para teléfonos pequeños (hasta 500px) */
+@media (max-width: 500px) {
+    .container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    button {
+        font-size: 14px;
+    }
+
+    #taskList li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .filter-box {
+        flex-direction: column;
+    }
+}
+
+/* Diseño para tablets y pantallas medianas (500px a 900px) */
+@media (min-width: 501px) and (max-width: 900px) {
+
+    .container,
+    .results {
+        max-width: 90%;
+    }
+
+    .filter-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
+
+/*Diseño para pantallas grandes (más de 900px) */
+@media (min-width: 901px) {
+
+    .container,
+    .results {
+        max-width: 700px;
+    }
+}
