@@ -13,7 +13,7 @@ body {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background-color: lightgreen;
+    background-color: gainsboro;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -129,7 +129,7 @@ button:hover {
     align-content: center;
     margin: 20px auto;
     padding: 20px;
-    background-color:lightgreen;
+    background-color:gainsboro;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
@@ -176,7 +176,7 @@ button:hover {
 .export-buttons button {
     padding: 8px 12px;
     border: none;
-    background-color: lightgreen;
+    background-color:darkgrey;
     color: black;
     border-radius: 8px;
     cursor: pointer;
@@ -184,7 +184,7 @@ button:hover {
 }
 
 .export-buttons button:hover {
-    background-color: green;
+    background-color: grey;
 }
 
 .status-message {
