@@ -9,6 +9,28 @@ body {
     padding: 0;
 }
 
+.main-layout {
+    display: flex;
+    padding: 1.5625rem;
+    gap: 20px; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.container {
+    flex: 1; 
+    min-width: 300px;
+}
+
+.results {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
 .container {
     max-width: 600px;
     margin: 40px auto;
